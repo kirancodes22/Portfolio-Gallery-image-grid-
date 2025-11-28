@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Gallery</title>
+    <style>
+
+
+   body{
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #228eac;
+    padding: 20px;
+
+
+   }
+
+   h1{
+    text-align: center;
+    margin-bottom: 18px;
+   }
+
+   .gallery{
+    display: grid;
+    gap: 12px;
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 1080px;
+    margin: 0 auto;
+   }
+
+   .item{
+    overflow: hidden;
+    border-radius: 8px;
+    background: #b49b9b;
+   }
+
+   .item img{
+    display: block;
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    transition: transform 300ms ease;
+    transform-origin: center;
+   }
+
+  .item:hover img,
+  .item:focus-within img{
+    transform: scale(1.08)
+  }
+
+  .link:focus {
+    outline: 3px solid black;
+    outline-offset: 4px;
+  }
+
+  @media (max-width: 900){
+    .gallery{
+        grid-template-columns: repeat(2, 1fr);
+        
+    }
+
+    .item img{
+
+        height: 200px;
+    }
+  }
+
+    </style>
+</head>
+
+
+
+<body>
+    <h1>Portfolio Gallery</h1>
+    <div class="gallery">
+        <div class="item" <a class="link" href="#"><img src="img1.png" alt="Project image 1"></a></div>
+        <div class="item" <a class="link" href="#"><img src="img2.jpeg" alt="Project image 2"></a></div>
+        <div class="item" <a class="link" href="#"><img src="img3.png" alt="Project image 3"></a></div>
+        <div class="item" <a class="link" href="#"><img src="img4.jpeg" alt="Project image 4"></a></div>
+        <div class="item" <a class="link" href="#"><img src="img5.png" alt="Project image 5"></a></div>
+        <div class="item" <a class="link" href="#"><img src="img6.png" alt="Project image 6"></a></div>
+    </div>
+    
+</body>
+</html>
